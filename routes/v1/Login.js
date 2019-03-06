@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const { db } = require('../../db');
+const { User } = require('../../db');
+const jwt = require('jsonwebtoken');
+// const { makeTimeout } = require('../../utils/Common');
 
 
 
@@ -18,12 +20,35 @@ const errorHandler = reqHandler => {
 
 
 router.post('/', errorHandler(async (req, res, next) => {
+    const { login, pass } = req.body;
 
-
+    if (login && pass) {
+        // await makeTimeout(3000);
+        const user = await User.findOne({ where: { login }, raw: true});
+        if (user) {
+            const result = await bcrypt.compare(pass, user.pass);
+            delete user.pass;
+            user.token = await createToken(user.userId);
+            if (result) res.json(user)
+            else res.status(403).send(`Credentials are wrong`);
+        } else {
+            res.status(400).send(`No such user`);
+        }
+    } else {
+        res.status(400).send(`Login and password are required`);
+    }
 })
 );
 
 
+const createToken = (userId) => {
+    return new Promise((resolve, reject) => {
+        jwt.sign({ userId }, process.env.SECRET_KEY, (err, token) => {
+            if (err) reject(err);
+            else resolve(token);
+        });
+    });
+}
 
 
 
