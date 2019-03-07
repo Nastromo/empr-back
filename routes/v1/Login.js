@@ -3,7 +3,6 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const { User } = require('../../db');
 const jwt = require('jsonwebtoken');
-// const { makeTimeout } = require('../../utils/Common');
 
 
 
@@ -23,7 +22,6 @@ router.post('/', errorHandler(async (req, res, next) => {
     const { login, pass } = req.body;
 
     if (login && pass) {
-        // await makeTimeout(3000);
         const user = await User.findOne({ where: { login }, raw: true});
         if (user) {
             const result = await bcrypt.compare(pass, user.pass);
