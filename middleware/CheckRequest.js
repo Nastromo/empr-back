@@ -5,7 +5,7 @@ const { User } = require('../db');
 
 const checkRequest = async (req, res, next) => {
     const urls = [`/v1/login`];
-
+    
     if (!urls.includes(req.originalUrl)) {
         try {
             await bindUser(req, next);

@@ -32,7 +32,18 @@ const Patient = PatientModel(db, Sequelize);
 
 const syncDB = async () => {
     try {
-        if (process.env.NODE_ENV === `production`) return await db.sync();
+        if (process.env.NODE_ENV === `production`) {
+            for (let i = 0; i < 500; i++) {
+                await Patient.create({
+                    access: `18032019${i}`,
+                    name: `Jon Snow ${i}`,
+                    addingDate: Date.now(),
+                    tray: `Tray ${i}`,
+                    speci: `Speci ${i}`,
+                })
+            }
+            return await db.sync();
+        } 
         else {
             if (false) {
                 for (let i = 0; i < 500; i++) {

@@ -16,10 +16,10 @@ rm app.tar.gz
 
 ssh nastromo@46.101.192.113 << 'ENDSSH'
 pm2 stop empr
-rm -rf empr/* empr/.*
-tar xf app.tar.gz -C empr
+rm -rf empr_back/* empr_back/.*
+tar xf app.tar.gz -C empr_back
 rm app.tar.gz
-cd empr
+cd empr_back
 npm install
 pm2 start empr
 ENDSSH
