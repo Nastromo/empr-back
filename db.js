@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
-const UserModel = require('./models/users');
+const UserModel = require('./models/Users');
+const PatientModel = require('./models/Patient');
 
 
 
@@ -26,12 +27,26 @@ const db = new Sequelize({
 })
 
 const User = UserModel(db, Sequelize);
+const Patient = PatientModel(db, Sequelize);
 
 
 const syncDB = async () => {
     try {
         if (process.env.NODE_ENV === `production`) return await db.sync();
-        else return await db.sync({ force: false, match: /_dev$/ });
+        else {
+            if (false) {
+                for (let i = 0; i < 500; i++) {
+                    await Patient.create({
+                        access: `18032019${i}`,
+                        name: `Jon Snow ${i}`,
+                        addingDate: Date.now(),
+                        tray: `Tray ${i}`,
+                        speci: `Speci ${i}`,
+                    })
+                }
+            }
+            return await db.sync({ force: false, match: /_dev$/ });
+        }
     } catch (err) {
         console.log(err);
     }
@@ -41,5 +56,6 @@ const syncDB = async () => {
 module.exports = {
     db,
     User,
+    Patient,
     syncDB
 }
