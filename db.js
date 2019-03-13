@@ -46,7 +46,7 @@ const syncDB = async () => {
             return await db.sync();
         } else {
             // console.log(await bcrypt.hash(`art`, 8));
-            if (false) {
+            if (true) {
                 await Gyn.create(alex);
                 await Gyn.create(samanta);
             }

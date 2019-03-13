@@ -44,6 +44,10 @@ module.exports = (db, type) => {
             type: type.STRING,
             allowNull: true,
         },
+        requisitionPdf: {
+            type: type.STRING,
+            allowNull: true,
+        },
         diagnosis: {
             type: type.STRING(6000),
             allowNull: true,
