@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Patient } = require('../../db');
+const { Gyn } = require('../../db');
 
 
 
@@ -19,16 +19,16 @@ const errorHandler = reqHandler => {
 router.post('/', errorHandler(async (req, res, next) => {
     switch (req.body.title) {
         case `GYN`:
-            res.json(await Patient.findAll());
+            res.json(await Gyn.findAll());
             break;
         case `NGYN`:
-            res.json(await Patient.findAll());
+            res.json(await Gyn.findAll());
             break;
         case `UVFISH`:
-            res.json(await Patient.findAll());
+            res.json(await Gyn.findAll());
             break;
         case `CLL`:
-            res.json(await Patient.findAll());
+            res.json(await Gyn.findAll());
             break;
         default: break;
     }

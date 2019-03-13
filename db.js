@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 const UserModel = require('./models/Users');
-const PatientModel = require('./models/Patient');
+const GynModel = require('./models/Gyn');
+const { alex, samanta } = require('./generateFakeGyn');
+const bcrypt = require('bcrypt');
 
 
 
@@ -26,35 +28,27 @@ const db = new Sequelize({
     },
 })
 
-const User = UserModel(db, Sequelize);
-const Patient = PatientModel(db, Sequelize);
+// superuser
+// art
+// art
+// $2b$08$M/vvOrPqspbpKUNt0dKLA.SZOuDXYx731LTD9pvtsZMkZWljasSzi
 
+const User = UserModel(db, Sequelize);
+const Gyn = GynModel(db, Sequelize);
 
 const syncDB = async () => {
     try {
         if (process.env.NODE_ENV === `production`) {
-            for (let i = 0; i < 500; i++) {
-                await Patient.create({
-                    access: `18032019${i}`,
-                    name: `Jon Snow ${i}`,
-                    addingDate: Date.now(),
-                    tray: `Tray ${i}`,
-                    speci: `Speci ${i}`,
-                })
+            if (false) {
+                await Gyn.create(alex);
+                await Gyn.create(samanta);
             }
             return await db.sync();
-        } 
-        else {
+        } else {
+            // console.log(await bcrypt.hash(`art`, 8));
             if (false) {
-                for (let i = 0; i < 500; i++) {
-                    await Patient.create({
-                        access: `18032019${i}`,
-                        name: `Jon Snow ${i}`,
-                        addingDate: Date.now(),
-                        tray: `Tray ${i}`,
-                        speci: `Speci ${i}`,
-                    })
-                }
+                await Gyn.create(alex);
+                await Gyn.create(samanta);
             }
             return await db.sync({ force: false, match: /_dev$/ });
         }
@@ -67,6 +61,6 @@ const syncDB = async () => {
 module.exports = {
     db,
     User,
-    Patient,
+    Gyn,
     syncDB
 }
