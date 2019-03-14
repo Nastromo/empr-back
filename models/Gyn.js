@@ -16,9 +16,21 @@ module.exports = (db, type) => {
             type: type.STRING,
             allowNull: false,
         },
+        lastName: {
+            type: type.STRING,
+            allowNull: false,
+        },
         received: {
             type: type.BIGINT,
             allowNull: false,
+        },
+        lastUpdate: {
+            type: type.BIGINT,
+            allowNull: true,
+        },
+        updatedBy: {
+            type: type.STRING,
+            allowNull: true,
         },
         tray: {
             type: type.STRING,
@@ -122,6 +134,14 @@ module.exports = (db, type) => {
         },
         other: {
             type: type.STRING,
+            allowNull: true,
+        },
+        instruments: {
+            type: type.STRING,
+            allowNull: true,
+        },
+        testComment: {
+            type: type.STRING(1000),
             allowNull: true,
         }
     })

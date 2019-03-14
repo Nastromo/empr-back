@@ -2,7 +2,8 @@ const alex = {
     masterAccess: `1`,
     access: `19032019234`,
     stage: `pending`,
-    name: `ALEX, SMITH`,
+    name: `ALEX`,
+    lastName: `SMITH`,
     received: 1551736800000,
     tray: `it's tray`,
     speci: `it's speci`,
@@ -29,14 +30,17 @@ const alex = {
     previousPapDiagnosis: `LSIL`,
     specimenSource: `Cervix`,
     specimenReceived: `Thinprep Vial`,
-    other: `This is the random comment text`
+    other: `This is the random comment text`,
+    instruments: `{"array":["instrument 1","instrument 2"]}`,
+    testComment: null,
 }
 
 const samanta = {
     masterAccess: `2`,
     access: `19032019275`,
     stage: `pending`,
-    name: `SAMANTA, BLACK`,
+    name: `SAMANTA`,
+    lastName: `BLACK`,
     received: 1368910800000,
     tray: `it's tray`,
     speci: `it's speci`,
@@ -63,7 +67,9 @@ const samanta = {
     previousPapDiagnosis: `AGC`,
     specimenSource: `Vaginal`,
     specimenReceived: `Conventional Smear`,
-    other: `Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...`
+    other: `Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...`,
+    instruments: `{"array":["instrument 1"]}`,
+    testComment: null,
 }
 
 module.exports = {
