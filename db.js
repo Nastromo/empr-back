@@ -29,9 +29,10 @@ const db = new Sequelize({
     },
 })
 
-// superuser
 // art
-// art
+// $2b$08$M/vvOrPqspbpKUNt0dKLA.SZOuDXYx731LTD9pvtsZMkZWljasSzi
+
+// vlad
 // $2b$08$M/vvOrPqspbpKUNt0dKLA.SZOuDXYx731LTD9pvtsZMkZWljasSzi
 
 const User = UserModel(db, Sequelize);
@@ -44,8 +45,9 @@ const syncDB = async () => {
         if (process.env.NODE_ENV === `production`) await db.sync();
         else await db.sync({ force: false, match: /_dev$/ });
 
-        // console.log(await bcrypt.hash(`art`, 8));
-        if (true) {
+        // console.log(await bcrypt.hash(`vlad`, 8));
+
+        if (false) {
             await Gyn.create(alex);
             await Gyn.create(samanta);
             createInstruments();

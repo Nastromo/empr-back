@@ -17,5 +17,9 @@ module.exports = (db, type) => {
             type: type.BIGINT,
             allowNull: false,
         },
+        user: {
+            type: type.STRING,
+            allowNull: true,
+        },
     })
 }

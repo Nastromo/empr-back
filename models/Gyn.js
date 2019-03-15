@@ -136,7 +136,11 @@ module.exports = (db, type) => {
             type: type.STRING,
             allowNull: true,
         },
-        instruments: {
+        instrumFirst: {
+            type: type.STRING,
+            allowNull: true,
+        },
+        instrumSecond: {
             type: type.STRING,
             allowNull: true,
         },

@@ -31,7 +31,8 @@ const alex = {
     specimenSource: `Cervix`,
     specimenReceived: `Thinprep Vial`,
     other: `This is the random comment text`,
-    instruments: `{"array":["instrument 1","instrument 2"]}`,
+    instrumFirst: `Centrifuge #2`,
+    instrumSecond: `Hologic Imager`,
     testComment: null,
 }
 
@@ -68,7 +69,8 @@ const samanta = {
     specimenSource: `Vaginal`,
     specimenReceived: `Conventional Smear`,
     other: `Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...`,
-    instruments: `{"array":["instrument 1"]}`,
+    instrumFirst: null,
+    instrumSecond: null,
     testComment: null,
 }
 
