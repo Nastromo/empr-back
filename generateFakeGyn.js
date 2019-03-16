@@ -48,7 +48,7 @@ const samanta = {
     client: `22 MOLIVER VLADIMIR`,
     physician: `Moliver, Vladimir DR`,
     requisitionPdf: `https://google.com`,
-    diagnosis: `{"d":[{"code":"z.004","text":"Encounter for general adult medical examination without abnormal findingsýEncounter for general adult medical examination without abnormal findingsýEncounter for general adult medical examination without abnormal findings"},{"code":"z.005","text":"Encounter for general adult medical examination without abnormal findingsýEncounter for general adult medical examination without abnormal findingsýEncounter for general adult medical examination without abnormal findings"}]}`,
+    diagnosis: `{"d":[{"code":"c.017","text":"Encounter for general adult medical "},{"code":"b.044","text":"Adult medical examination without abnormal findingsýEncounter for general adult medical examination without abnormal for general adult medical examination without abnormal findings"}]}`,
     patientHistory: `Post Partum`,
     lmpDate: 1365886800000,
     routineScreen: null,

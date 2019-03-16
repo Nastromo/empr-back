@@ -52,7 +52,7 @@ const syncDB = async () => {
         if (false) {
             await Gyn.create(alex);
             await Gyn.create(samanta);
-            createInstruments();
+            // createInstruments();
         }
         return new Promise(resolve => resolve());
     } catch (err) {

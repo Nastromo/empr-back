@@ -19,16 +19,16 @@ const errorHandler = reqHandler => {
 router.post('/', errorHandler(async (req, res, next) => {
     switch (req.body.title) {
         case `GYN`:
-            res.json(await Gyn.findAll());
+            res.json(await Gyn.findAll({ where: {stage: `pending`} }));
             break;
         case `NGYN`:
-            res.json(await Gyn.findAll());
+            res.json([]);
             break;
         case `UVFISH`:
-            res.json(await Gyn.findAll());
+            res.json([]);
             break;
         case `CLL`:
-            res.json(await Gyn.findAll());
+            res.json([]);
             break;
         default: break;
     }
