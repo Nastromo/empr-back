@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const UserModel = require('./models/Users');
 const GynModel = require('./models/Gyn');
+const GynEditsModel = require('./models/GynEdits');
 const InstrumentModel = require('./models/Instruments');
 const { alex, samanta } = require('./generateFakeGyn');
 const bcrypt = require('bcrypt');
@@ -37,6 +38,7 @@ const db = new Sequelize({
 
 const User = UserModel(db, Sequelize);
 const Gyn = GynModel(db, Sequelize);
+const GynEdits = GynEditsModel(db, Sequelize);
 const Instrument = InstrumentModel(db, Sequelize);
 
 
@@ -123,6 +125,7 @@ module.exports = {
     db,
     User,
     Gyn,
+    GynEdits,
     Instrument,
     syncDB
 }

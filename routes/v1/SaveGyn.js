@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Gyn, Instrument } = require('../../db');
+const { Gyn, GynEdits } = require('../../db');
 
 
 
@@ -18,8 +18,9 @@ const errorHandler = reqHandler => {
 
 router.post('/', errorHandler(async (req, res, next) => {
     await Gyn.update( req.body, { where: { access: req.body.access } });
-    // await GynEdits.create(patient);
-    res.status(200).end();
+    await GynEdits.create(req.body);
+    const list = await Gyn.findAll({ where: {stage: `pending`} });
+    res.json(list);
 })
 );
 

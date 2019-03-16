@@ -1,5 +1,5 @@
 module.exports = (db, type) => {
-    return db.define('gyn', {
+    return db.define('gyn_edits', {
         masterAccess: {
             type: type.STRING,
             allowNull: false,
