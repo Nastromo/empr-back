@@ -30,5 +30,14 @@ router.get('/', errorHandler(async (req, res, next) => {
 );
 
 
+router.post('/', errorHandler(async (req, res, next) => {
+    const { type, title } = req.body;
+    const instrum = await Instrument.findOrCreate({where: {title}, defaults: {type, title}, raw: true});
+    if (instrum[1]) res.json(await Instrument.findAll({ raw: true }));
+    else throw new Error(`This instrument name is already in use`);
+})
+);
+
+
 
 module.exports = router;
