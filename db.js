@@ -62,87 +62,59 @@ const syncDB = async () => {
 const createInstruments = () => {
     Instrument.create({
         type: `Whater bath`,
-        title: `Anova Whater Bath`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `Anova Whater Bath`
     })
     Instrument.create({
         type: `Whater bath`,
-        title: `Fisher Whater Bath`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `Fisher Whater Bath`
     })
     Instrument.create({
         type: `Centrifuge`,
-        title: `Centrifuge #1`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `Centrifuge #1`
     })
     Instrument.create({
         type: `Centrifuge`,
-        title: `Centrifuge #2`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `Centrifuge #2`
     })
     Instrument.create({
         type: `Hybridizer`,
-        title: `Abbott Termobrite #1`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `Abbott Termobrite #1`
     })
     Instrument.create({
         type: `Hybridizer`,
-        title: `Abbott Termobrite #2`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `Abbott Termobrite #2`
     })
     Instrument.create({
         type: `Imager`,
-        title: `Hologic Imager`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `Hologic Imager`
     })
     Instrument.create({
         type: `Coverslipper`,
-        title: `Manual Coverslipper`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `Manual Coverslipper`
     })
     Instrument.create({
         type: `Coverslipper`,
-        title: `Sacura Coverslipper`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `Sacura Coverslipper`
     })
     Instrument.create({
         type: `Stainer`,
-        title: `Manual Staining`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `Manual Staining`
     })
     Instrument.create({
         type: `Stainer`,
-        title: `Abbott VP2000`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `Abbott VP2000`
     })
     Instrument.create({
         type: `Stainer`,
-        title: `Sakura Stainer`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `Sakura Stainer`
     })
     Instrument.create({
         type: `Processor`,
-        title: `T2000 #1`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `T2000 #1`
     })
     Instrument.create({
         type: `Processor`,
-        title: `T2000 #2`,
-        isAvailable: true,
-        addDate: Date.now()
+        title: `T2000 #2`
     })
 }
 

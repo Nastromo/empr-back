@@ -33,7 +33,7 @@ const alex = {
     other: `This is the random comment text`,
     instrumFirst: `Centrifuge #2`,
     instrumSecond: `Hologic Imager`,
-    testComment: null,
+    testComment: ``,
 }
 
 const samanta = {
@@ -71,7 +71,7 @@ const samanta = {
     other: `Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...`,
     instrumFirst: null,
     instrumSecond: null,
-    testComment: null,
+    testComment: ``,
 }
 
 module.exports = {
