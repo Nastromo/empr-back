@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const { User } = require('../../db');
-const bcrypt = require('bcrypt');
 
 
 
@@ -17,24 +16,19 @@ const errorHandler = reqHandler => {
 }
 
 
-router.get('/', errorHandler(async (req, res, next) => {
-    if (req.user) res.json(req.user);
-    else res.status(403).send(`No such user`)
-})
-);
 
-router.post('/', errorHandler(async (req, res, next) => {
-    const { userRole, regDate, login, pass } = req.body;
-    await User.create({
-        userRole,
-        regDate,
-        login,
-        pass: await bcrypt.hash(pass, 8)
-    });
+router.get('/', errorHandler(async (req, res, next) => {
     res.json(await User.findAll({raw: true}));
 })
 );
 
+
+router.post('/', errorHandler(async (req, res, next) => {
+    const { login }  = req.body;
+    await User.destroy({where: {login}});
+    res.json(await User.findAll({raw: true}));
+})
+);
 
 
 

@@ -1,11 +1,9 @@
 module.exports = (db, type) => {
     return db.define('users', {
         userId: {
-            type: type.STRING,
-            allowNull: false,
-            unique: true,
+            type: type.INTEGER,
             primaryKey: true,
-            autoIncrement: false,
+            autoIncrement: true,
         },
         userRole: {
             type: type.STRING,
