@@ -4,7 +4,9 @@ const GynModel = require('./models/Gyn');
 const GynEditsModel = require('./models/GynEdits');
 const InstrumentModel = require('./models/Instruments');
 const { alex, samanta } = require('./generateFakeGyn');
-const bcrypt = require('bcrypt');
+const NgynModel = require('./models/Ngyn');
+const NgynEditsModel = require('./models/NgynEdits');
+const bcrypt = require('bcryptjs');
 
 
 
@@ -40,6 +42,9 @@ const User = UserModel(db, Sequelize);
 const Gyn = GynModel(db, Sequelize);
 const GynEdits = GynEditsModel(db, Sequelize);
 const Instrument = InstrumentModel(db, Sequelize);
+const Ngyn = NgynModel(db, Sequelize);
+const NgynEdits = NgynEditsModel(db, Sequelize);
+
 
 
 const syncDB = async () => {
@@ -52,7 +57,7 @@ const syncDB = async () => {
         if (false) {
             await Gyn.create(alex);
             await Gyn.create(samanta);
-            // createInstruments();
+            createInstruments();
         }
         return new Promise(resolve => resolve());
     } catch (err) {
@@ -127,5 +132,7 @@ module.exports = {
     Gyn,
     GynEdits,
     Instrument,
+    Ngyn,
+    NgynEdits,
     syncDB
 }
