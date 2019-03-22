@@ -8,6 +8,8 @@ const instrumList = require('./v1/InstrumList');
 const getUsers = require('./v1/GetUsers');
 const saveNgyn = require('./v1/SaveNgyn');
 const submitNgyn = require('./v1/SubmitNgyn');
+const saveUvfish = require('./v1/SaveUvfish');
+const submitUvfish = require('./v1/SubmitUvfish');
 
 
 
@@ -23,6 +25,8 @@ const apiV1 = (app) => {
     app.use(`/v1/get-users`, getUsers);
     app.use(`/v1/save-ngyn`, saveNgyn);
     app.use(`/v1/submit-ngyn`, submitNgyn);
+    app.use(`/v1/save-uvfish`, saveUvfish);
+    app.use(`/v1/submit-uvfish`, submitUvfish);
 }
 
 module.exports = apiV1;

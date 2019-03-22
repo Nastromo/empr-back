@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Gyn, Ngyn } = require('../../db');
+const { Gyn, Ngyn, Uvfish } = require('../../db');
 
 
 
@@ -19,13 +19,13 @@ const errorHandler = reqHandler => {
 router.post('/', errorHandler(async (req, res, next) => {
     switch (req.body.title) {
         case `GYN`:
-            res.json(await Gyn.findAll({ where: {stage: `pending`} }));
+            res.json(await Gyn.findAll({ where: { stage: `pending` } }));
             break;
         case `NGYN`:
-            res.json(await Ngyn.findAll({ where: {stage: `pending`} }));
+            res.json(await Ngyn.findAll({ where: { stage: `pending` } }));
             break;
         case `UVFISH`:
-            res.json([]);
+            res.json(await Uvfish.findAll({ where: { stage: `pending` } }));
             break;
         case `CLL`:
             res.json([]);

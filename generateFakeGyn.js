@@ -126,9 +126,65 @@ const coco = {
     instrumSecond: null,
 }
 
+const soso = {
+    masterAccess: `41`,
+    access: `19032019374`,
+    stage: `pending`,
+    name: `SOSO`,
+    lastName: `KOKO`,
+    received: 1368910800000,
+    tray: `it's tray`,
+    speci: `it's speci`,
+    dob: 536446800000,
+    sex: `FEMALE`,
+    client: `22 MOLIVER VLADIMIR`,
+    physician: `Moliver, Vladimir DR`,
+    requisitionPdf: `https://google.com`,
+    diagnosis: `{"d":[{"code":"c.017","text":"Encounter for general adult medical "},{"code":"b.044","text":"Adult medical examination without abnormal findingsýEncounter for general adult medical examination without abnormal for general adult medical examination without abnormal findings"}]}`,
+    source: null,
+    receivedSource: null,
+    ml: null,
+    turbidity: null,
+    color: null,
+    specType: null,
+    fixative: null,
+    slideType: null,
+    instrumFirst: null,
+    instrumSecond: null,
+}
+
+const lala = {
+    masterAccess: `43`,
+    access: `19032019301`,
+    stage: `pending`,
+    name: `LALA`,
+    lastName: `SASA`,
+    received: 1368910800000,
+    tray: `it's tray`,
+    speci: `it's speci`,
+    dob: 536446800000,
+    sex: `FEMALE`,
+    client: `22 MOLIVER VLADIMIR`,
+    physician: `Moliver, Vladimir DR`,
+    requisitionPdf: `https://google.com`,
+    diagnosis: `{"d":[{"code":"c.017","text":"Encounter for general adult medical "},{"code":"b.044","text":"Adult medical examination without abnormal findingsýEncounter for general adult medical examination without abnormal for general adult medical examination without abnormal findings"}]}`,
+    source: null,
+    receivedSource: null,
+    ml: null,
+    turbidity: null,
+    color: null,
+    specType: null,
+    fixative: null,
+    slideType: null,
+    instrumFirst: null,
+    instrumSecond: null,
+}
+
 module.exports = {
     alex,
     samanta,
     vivi,
-    coco
+    coco,
+    soso,
+    lala
 }
