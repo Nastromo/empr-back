@@ -68,6 +68,10 @@ module.exports = (db, type) => {
             type: type.STRING,
             allowNull: true,
         },
+        receivedSource: {
+            type: type.STRING,
+            allowNull: true,
+        },
         turbidity: {
             type: type.STRING,
             allowNull: true,
@@ -102,6 +106,10 @@ module.exports = (db, type) => {
             allowNull: true,
         },
         instrumSecond: {
+            type: type.STRING,
+            allowNull: true,
+        },
+        slides: {
             type: type.STRING,
             allowNull: true,
         },

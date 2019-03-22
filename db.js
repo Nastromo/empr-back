@@ -3,7 +3,7 @@ const UserModel = require('./models/Users');
 const GynModel = require('./models/Gyn');
 const GynEditsModel = require('./models/GynEdits');
 const InstrumentModel = require('./models/Instruments');
-const { alex, samanta } = require('./generateFakeGyn');
+const { alex, samanta, vivi, coco } = require('./generateFakeGyn');
 const NgynModel = require('./models/Ngyn');
 const NgynEditsModel = require('./models/NgynEdits');
 const bcrypt = require('bcryptjs');
@@ -57,6 +57,8 @@ const syncDB = async () => {
         if (false) {
             await Gyn.create(alex);
             await Gyn.create(samanta);
+            await Ngyn.create(vivi);
+            await Ngyn.create(coco);
             createInstruments();
         }
         return new Promise(resolve => resolve());

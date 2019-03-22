@@ -71,7 +71,64 @@ const samanta = {
     instrumSecond: null,
 }
 
+const vivi = {
+    masterAccess: `3`,
+    access: `19032019111`,
+    stage: `pending`,
+    name: `VIVI`,
+    lastName: `WHITE`,
+    received: 1368910800000,
+    tray: `it's tray`,
+    speci: `it's speci`,
+    dob: 536446800000,
+    sex: `FEMALE`,
+    client: `22 MOLIVER VLADIMIR`,
+    physician: `Moliver, Vladimir DR`,
+    requisitionPdf: `https://google.com`,
+    diagnosis: `{"d":[{"code":"c.017","text":"Encounter for general adult medical "},{"code":"b.044","text":"Adult medical examination without abnormal findingsýEncounter for general adult medical examination without abnormal for general adult medical examination without abnormal findings"}]}`,
+    source: `Urine`,
+    receivedSource: `Specimen Cup`,
+    ml: `3`,
+    turbidity: `Clear`,
+    color: `Yellow`,
+    specType: `Fluid`,
+    fixative: `Alcohol`,
+    slideType: `ThinPrep`,
+    grossOther: `Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...`,
+    instrumFirst: null,
+    instrumSecond: null,
+}
+
+const coco = {
+    masterAccess: `4`,
+    access: `19032019222`,
+    stage: `pending`,
+    name: `COCO`,
+    lastName: `CHACHA`,
+    received: 1368910800000,
+    tray: `it's tray`,
+    speci: `it's speci`,
+    dob: 536446800000,
+    sex: `FEMALE`,
+    client: `22 MOLIVER VLADIMIR`,
+    physician: `Moliver, Vladimir DR`,
+    requisitionPdf: `https://google.com`,
+    diagnosis: `{"d":[{"code":"c.017","text":"Encounter for general adult medical "},{"code":"b.044","text":"Adult medical examination without abnormal findingsýEncounter for general adult medical examination without abnormal for general adult medical examination without abnormal findings"}]}`,
+    source: null,
+    receivedSource: null,
+    ml: null,
+    turbidity: null,
+    color: null,
+    specType: null,
+    fixative: null,
+    slideType: null,
+    instrumFirst: null,
+    instrumSecond: null,
+}
+
 module.exports = {
     alex,
-    samanta
+    samanta,
+    vivi,
+    coco
 }
