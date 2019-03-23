@@ -10,6 +10,7 @@ const saveNgyn = require('./v1/SaveNgyn');
 const submitNgyn = require('./v1/SubmitNgyn');
 const saveUvfish = require('./v1/SaveUvfish');
 const submitUvfish = require('./v1/SubmitUvfish');
+const processing = require('./v1/processing');
 
 
 
@@ -27,6 +28,8 @@ const apiV1 = (app) => {
     app.use(`/v1/submit-ngyn`, submitNgyn);
     app.use(`/v1/save-uvfish`, saveUvfish);
     app.use(`/v1/submit-uvfish`, submitUvfish);
+    app.use(`/v1/processing`, processing);
+   
 }
 
 module.exports = apiV1;
