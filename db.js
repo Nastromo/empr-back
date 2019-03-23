@@ -3,12 +3,14 @@ const UserModel = require('./models/Users');
 const GynModel = require('./models/Gyn');
 const GynEditsModel = require('./models/GynEdits');
 const InstrumentModel = require('./models/Instruments');
-const { alex, samanta, vivi, coco, soso, lala } = require('./generateFakeGyn');
+const { alex, samanta, vivi, coco, soso, lala, toto, caca } = require('./generateFakeGyn');
 const NgynModel = require('./models/Ngyn');
 const NgynEditsModel = require('./models/NgynEdits');
 const bcrypt = require('bcryptjs');
 const UvfishModel = require('./models/Uvfish');
 const UvfishEditsModel = require('./models/UvfishEdits');
+const CllModel = require('./models/Cll');
+const CllEditsModel = require('./models/CllEdits');
 
 
 
@@ -48,6 +50,8 @@ const Ngyn = NgynModel(db, Sequelize);
 const NgynEdits = NgynEditsModel(db, Sequelize);
 const Uvfish = UvfishModel(db, Sequelize);
 const UvfishEdits = UvfishEditsModel(db, Sequelize);
+const Cll = CllModel(db, Sequelize);
+const CllEdits = CllEditsModel(db, Sequelize);
 
 
 
@@ -65,6 +69,8 @@ const syncDB = async () => {
             await Ngyn.create(coco);
             await Uvfish.create(soso);
             await Uvfish.create(lala);
+            await Cll.create(toto);
+            await Cll.create(caca);
             createInstruments();
         }
         return new Promise(resolve => resolve());
@@ -144,5 +150,7 @@ module.exports = {
     NgynEdits,
     Uvfish,
     UvfishEdits,
+    Cll,
+    CllEdits,
     syncDB
 }

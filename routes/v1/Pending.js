@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Gyn, Ngyn, Uvfish } = require('../../db');
+const { Gyn, Ngyn, Uvfish, Cll } = require('../../db');
 
 
 
@@ -28,7 +28,7 @@ router.post('/', errorHandler(async (req, res, next) => {
             res.json(await Uvfish.findAll({ where: { stage: `pending` } }));
             break;
         case `CLL`:
-            res.json([]);
+            res.json(await Cll.findAll({ where: { stage: `pending` } }));
             break;
         default: break;
     }
