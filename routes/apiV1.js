@@ -11,6 +11,7 @@ const submitNgyn = require('./v1/SubmitNgyn');
 const saveUvfish = require('./v1/SaveUvfish');
 const submitUvfish = require('./v1/SubmitUvfish');
 const processing = require('./v1/Processing');
+const screening = require('./v1/screening');
 
 
 
@@ -29,6 +30,7 @@ const apiV1 = (app) => {
     app.use(`/v1/save-uvfish`, saveUvfish);
     app.use(`/v1/submit-uvfish`, submitUvfish);
     app.use(`/v1/processing`, processing);
+    app.use(`/v1/screening`, screening);
    
 }
 

@@ -149,6 +149,16 @@ module.exports = (db, type) => {
             type: type.STRING(1000),
             allowNull: true,
             defaultValue: ``
+        },
+        preAnalysis: {
+            type: type.STRING,
+            allowNull: true,
+            defaultValue: `[]`
+        },
+        reportComments: {
+            type: type.STRING(2000),
+            allowNull: true,
+            defaultValue: `[]`
         }
     })
 }
