@@ -191,6 +191,7 @@ module.exports = (db, type) => {
         qcComment: {
             type: type.STRING,
             allowNull: true,
+            defaultValue: ``
         },
     })
 }
