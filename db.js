@@ -6,7 +6,6 @@ const InstrumentModel = require('./models/Instruments');
 const { alex, samanta, vivi, coco, soso, lala, toto, caca } = require('./generateFakeGyn');
 const NgynModel = require('./models/Ngyn');
 const NgynEditsModel = require('./models/NgynEdits');
-const bcrypt = require('bcryptjs');
 const UvfishModel = require('./models/Uvfish');
 const UvfishEditsModel = require('./models/UvfishEdits');
 const CllModel = require('./models/Cll');
@@ -34,6 +33,7 @@ const db = new Sequelize({
         idle: 30000,
         acquire: 60000,
     },
+    query: { raw: true }
 })
 
 // art
@@ -58,7 +58,7 @@ const CllEdits = CllEditsModel(db, Sequelize);
 const syncDB = async () => {
     try {
         if (process.env.NODE_ENV === `production`) await db.sync();
-        else await db.sync({ force: false, match: /_dev$/ });
+        else await db.sync({ force: false });
 
         // console.log(await bcrypt.hash(`vlad`, 8));
 

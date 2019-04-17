@@ -61,7 +61,7 @@ module.exports = (db, type) => {
             allowNull: true,
         },
         diagnosis: {
-            type: type.STRING(6000),
+            type: type.TEXT,
             allowNull: true,
         },
         source: {
@@ -114,7 +114,7 @@ module.exports = (db, type) => {
             allowNull: true,
         },
         testComment: {
-            type: type.STRING(1000),
+            type: type.TEXT,
             allowNull: true,
             defaultValue: ``
         },
@@ -124,9 +124,41 @@ module.exports = (db, type) => {
             defaultValue: `[]`
         },
         reportComments: {
-            type: type.STRING(2000),
+            type: type.TEXT,
             allowNull: true,
             defaultValue: `[]`
-        }
+        },
+        processor: {
+            type: type.STRING,
+            allowNull: true,
+        },
+        stainMethod: {
+            type: type.STRING,
+            allowNull: true,
+        },
+        nuclear: {
+            type: type.STRING,
+            allowNull: true,
+        },
+        cytoplasmic: {
+            type: type.STRING,
+            allowNull: true,
+        },
+        prepQuality: {
+            type: type.STRING,
+            allowNull: true,
+        },
+        contamination: {
+            type: type.STRING,
+            allowNull: true,
+        },
+        qcResults: {
+            type: type.STRING,
+            allowNull: true,
+        },
+        qcComment: {
+            type: type.STRING,
+            allowNull: true,
+        },
     })
 }
