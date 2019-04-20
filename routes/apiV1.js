@@ -12,7 +12,7 @@ const saveUvfish = require('./v1/SaveUvfish');
 const submitUvfish = require('./v1/SubmitUvfish');
 const processing = require('./v1/Processing');
 const screening = require('./v1/Screening');
-const stainQc = require('./v1/StainQc');
+const stainQc = require('./v1/StainQcz');
 const submitGynStainQc = require('./v1/SubmitGynStainQc');
 
 
