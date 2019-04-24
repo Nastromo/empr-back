@@ -2,4 +2,3 @@
 /prod
 .env
 *.pem
-*.sh
