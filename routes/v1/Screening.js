@@ -23,7 +23,7 @@ router.post('/', errorHandler(async (req, res, next) => {
             res.json(await Gyn.findAll({
                 where: {
                     stage: {
-                        [Op.or]: [`pending screening`, `pending stain qc`]
+                        [Op.or]: [`pending screening`, `Pass stain qc`, `pending stain qc`, `pathologist`]
                     }
                 }
             }));

@@ -8,6 +8,10 @@ module.exports = (db, type) => {
             type: type.STRING,
             allowNull: false,
         },
+        status: {
+            type: type.STRING,
+            allowNull: true,
+        },
         case: {
             type: type.STRING,
             allowNull: true,

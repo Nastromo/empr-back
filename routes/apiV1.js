@@ -16,6 +16,9 @@ const stainQc = require('./v1/StainQcz');
 const submitGynStainQc = require('./v1/SubmitGynStainQc');
 const cancelCase = require('./v1/CancelCase');
 const deleteCase = require('./v1/DeleteCase');
+const submitScreeningGyn = require('./v1/SubmitScreeningGyn');
+const submitScreeningNgyn = require('./v1/SubmitScreeningNgyn');
+const submitScreeningUvfish = require('./v1/SubmitScreeningUvfish');
 
 
 
@@ -42,6 +45,9 @@ const apiV1 = (app) => {
     app.use(`/v1/delete-gyn`, deleteCase);
     app.use(`/v1/delete-ngyn`, deleteCase);
     app.use(`/v1/delete-uvfish`, deleteCase);
+    app.use(`/v1/submit-screening-gyn`, submitScreeningGyn);
+    app.use(`/v1/submit-screening-ngyn`, submitScreeningNgyn);
+    app.use(`/v1/submit-screening-uvfish`, submitScreeningUvfish);
     
 }
 

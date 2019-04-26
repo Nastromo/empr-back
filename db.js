@@ -71,7 +71,7 @@ const syncDB = async () => {
             await Uvfish.create(lala);
             await Cll.create(toto);
             await Cll.create(caca);
-            createInstruments();
+            // createInstruments();
         }
         return new Promise(resolve => resolve());
     } catch (err) {

@@ -3,10 +3,15 @@ module.exports = (db, type) => {
         masterAccess: {
             type: type.STRING,
             allowNull: false,
+            unique: true,
         },
         access: {
             type: type.STRING,
             allowNull: false,
+        },
+        status: {
+            type: type.STRING,
+            allowNull: true,
         },
         case: {
             type: type.STRING,
