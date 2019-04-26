@@ -19,7 +19,7 @@ const errorHandler = reqHandler => {
 
 router.post('/', errorHandler(async (req, res, next) => {
     switch (req.originalUrl) {
-        case `/v1//v1/delete-gyn`:
+        case `/v1/delete-gyn`:
             await Gyn.update(req.body, { where: { access: req.body.access } });
             await GynEdits.create(req.body);
             break;
