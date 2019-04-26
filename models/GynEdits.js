@@ -8,6 +8,10 @@ module.exports = (db, type) => {
             type: type.STRING,
             allowNull: false,
         },
+        case: {
+            type: type.STRING,
+            allowNull: true,
+        },
         stage: {
             type: type.STRING,
             allowNull: false,
@@ -192,6 +196,14 @@ module.exports = (db, type) => {
             type: type.STRING,
             allowNull: true,
             defaultValue: ``
+        },
+        histologyCase: {
+            type: type.STRING,
+            allowNull: true,
+        },
+        molecular: {
+            type: type.STRING,
+            allowNull: true,
         },
     })
 }
