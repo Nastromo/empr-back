@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { User } = require('../../db');
+const { Gyn, GynEdits, Ngyn, NgynEdits, Uvfish, UvfishEdits } = require('../../db');
 
 
 
@@ -33,6 +33,7 @@ router.post('/', errorHandler(async (req, res, next) => {
             break;
         default: break;
     }
+    res.status(200).end();
 })
 );
 
