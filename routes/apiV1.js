@@ -20,6 +20,7 @@ const submitScreeningGyn = require('./v1/SubmitScreeningGyn');
 const submitScreeningNgyn = require('./v1/SubmitScreeningNgyn');
 const submitScreeningUvfish = require('./v1/SubmitScreeningUvfish');
 const additionalSlide = require('./v1/AdditionalSlide');
+const addPhotos = require('./v1/AddPhotos');
 
 
 
@@ -50,6 +51,8 @@ const apiV1 = (app) => {
     app.use(`/v1/submit-screening-ngyn`, submitScreeningNgyn);
     app.use(`/v1/submit-screening-uvfish`, submitScreeningUvfish);
     app.use(`/v1/additional-slide`, additionalSlide);
+    app.use(`/v1/add-photos`, addPhotos);
+    
 
     
 }
