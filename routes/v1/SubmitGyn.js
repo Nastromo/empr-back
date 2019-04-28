@@ -28,7 +28,7 @@ router.post('/', errorHandler(async (req, res, next) => {
     const stainQc = await Gyn.findAll({
         where: {
             stage: {
-                [Op.or]: [`pending stain qc`, `Pass stain qc`]
+                [Op.or]: [`pending stain qc`, `Pass stain qc`, `pathologist`, `final`]
             },
             lastUpdate: {
                 [Op.between]: [startOfDate, endOfDate]

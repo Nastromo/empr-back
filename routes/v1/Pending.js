@@ -22,7 +22,7 @@ router.post('/', errorHandler(async (req, res, next) => {
         case `GYN`:
             res.json(await Gyn.findAll({ where: { 
                 stage: {
-                    [Op.or]: [`PENDING`, `case canceled`]
+                    [Op.or]: [`PENDING`, `case canceled`, `Pop Slide`, `Cell Block`]
                 }
             }}));
             break;

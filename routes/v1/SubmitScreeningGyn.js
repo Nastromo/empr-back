@@ -27,7 +27,7 @@ router.post('/', errorHandler(async (req, res, next) => {
     const passedStainQc = await Gyn.findAll({
         where: {
             stage: {
-                [Op.or]: [`Pass stain qc`, `pathologist`]
+                [Op.or]: [`Pass stain qc`, `pathologist`, `final`]
             },
             qcResults: `Pass`,
             lastUpdate: {
@@ -36,7 +36,7 @@ router.post('/', errorHandler(async (req, res, next) => {
         }
     });
 
-    if (passedStainQc.length === 2) {
+    if (passedStainQc.length >= 2) {
         await Gyn.update(req.body, { where: { access: req.body.access } });
         await GynEdits.create(req.body);
         res.status(200).end();
