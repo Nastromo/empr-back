@@ -9,6 +9,10 @@ module.exports = (db, type) => {
             type: type.STRING,
             allowNull: false,
         },
+        images: {
+            type: type.TEXT,
+            allowNull: true,
+        },
         status: {
             type: type.STRING,
             allowNull: true,

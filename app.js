@@ -1,14 +1,17 @@
 require('dotenv').config();
+global.projectRoot = __dirname;
+const path = require('path');
 const express = require('express');
 const { syncDB } = require('./db');
 const cors = require('cors');
 const apiV1 = require('./routes/apiV1');
 const checkRequest = require('./middleware/CheckRequest');
 
-
 const app = express();
+const dir = path.join(__dirname, 'uploads');
 
 app.use(cors());
+app.use(express.static(dir));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(checkRequest);
@@ -29,6 +32,3 @@ apiV1(app);
         app.listen(port, () => { console.log(`Dev Main Server listening ${port} port...`); });
     }
 })();
-
-
-
