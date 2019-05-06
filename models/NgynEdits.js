@@ -181,5 +181,9 @@ module.exports = (db, type) => {
             type: type.STRING,
             allowNull: true,
         },
+        preparationMethod: {
+            type: type.STRING,
+            allowNull: true,
+        }
     })
 }
