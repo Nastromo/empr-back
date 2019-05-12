@@ -149,5 +149,15 @@ module.exports = (db, type) => {
             type: type.STRING,
             allowNull: true,
         },
+        externalComment: {
+            type: type.STRING(1000),
+            allowNull: true,
+            defaultValue: ``
+        },
+        internalComment: {
+            type: type.STRING(1000),
+            allowNull: true,
+            defaultValue: ``
+        },
     })
 }

@@ -216,6 +216,11 @@ module.exports = (db, type) => {
         preparationMethod: {
             type: type.STRING,
             allowNull: true,
-        }
+        },
+        receivedOther: {
+            type: type.STRING,
+            allowNull: true,
+            defaultValue: ``
+        },
     })
 }
