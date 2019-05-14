@@ -158,5 +158,20 @@ module.exports = (db, type) => {
             allowNull: true,
             defaultValue: ``
         },
+        numberCells: {
+            type: type.INTEGER,
+            allowNull: true,
+            defaultValue: 0
+        },
+        numberChroms: {
+            type: type.INTEGER,
+            allowNull: true,
+            defaultValue: 0
+        },
+        numberZero: {
+            type: type.INTEGER,
+            allowNull: true,
+            defaultValue: 0
+        },
     })
 }
