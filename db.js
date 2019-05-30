@@ -10,6 +10,7 @@ const UvfishModel = require('./models/Uvfish');
 const UvfishEditsModel = require('./models/UvfishEdits');
 const CllModel = require('./models/Cll');
 const CllEditsModel = require('./models/CllEdits');
+const UvfishPdfModel = require('./models/UvfishPdf');
 
 
 
@@ -52,6 +53,7 @@ const Uvfish = UvfishModel(db, Sequelize);
 const UvfishEdits = UvfishEditsModel(db, Sequelize);
 const Cll = CllModel(db, Sequelize);
 const CllEdits = CllEditsModel(db, Sequelize);
+const UvfishPdf = UvfishPdfModel(db, Sequelize);
 
 
 
@@ -152,5 +154,6 @@ module.exports = {
     UvfishEdits,
     Cll,
     CllEdits,
+    UvfishPdf,
     syncDB
 }
