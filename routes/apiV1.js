@@ -22,6 +22,7 @@ const submitScreeningUvfish = require('./v1/SubmitScreeningUvfish');
 const additionalSlide = require('./v1/AdditionalSlide');
 const addPhotos = require('./v1/AddPhotos');
 const pdfUvfish = require('./v1/PdfUvfish');
+const pdfUv = require('./v1/pdfUv');
 
 
 
@@ -54,6 +55,7 @@ const apiV1 = (app) => {
     app.use(`/v1/additional-slide`, additionalSlide);
     app.use(`/v1/add-photos`, addPhotos);
     app.use(`/v1/pdf-uvfish`, pdfUvfish);
+    app.use(`/v1/pdf-uvfish-file`, pdfUv);
     
 
     

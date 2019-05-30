@@ -113,5 +113,9 @@ module.exports = (db, type) => {
             type: type.STRING,
             allowNull: true,
         },
+        printDate: {
+            type: type.BIGINT,
+            allowNull: true,
+        },
     })
 }
