@@ -24,10 +24,20 @@ router.get('/:id', errorHandler(async (req, res, next) => {
     const html = getHtml(data);
     const options = { format: 'A4' };
 
-    pdf.create(html, options).toFile(`./uploads/${data.caseNumber}.pdf`, function (err, res) {
-        if (err) return console.log(err);
-        console.log(res);
-    });
+    console.log(data.caseNumber);
+
+    pdf.create(html, options)
+        .toFile(`../uvfish_pdf/MPDF/cytology-reports/uvfish/${data.caseNumber}.pdf`, function (err, rez) {
+            if (err) {
+                console.log(err);
+                throw new Error('PDF generation error');
+            } else {
+                console.log(rez);
+                res.status(200).end();
+            }
+        });
+
+
 })
 );
 
