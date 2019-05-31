@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cp -R html prod
 cp -R middleware prod
 cp -R routes prod
 cp -R models prod
@@ -10,7 +11,7 @@ cp generateFakeGyn.js prod
 cp package.json prod
 
 cd prod
-tar czf app.tar.gz middleware/ models/ routes/ utils/ app.js db.js generateFakeGyn.js package.json .env
+tar czf app.tar.gz html/ middleware/ models/ routes/ utils/ app.js db.js generateFakeGyn.js package.json .env
 
 sftp -i "devempr.pem" ubuntu@192.168.20.211 << 'ENDSSH'
 put app.tar.gz

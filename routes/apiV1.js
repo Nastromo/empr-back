@@ -22,7 +22,7 @@ const submitScreeningUvfish = require('./v1/SubmitScreeningUvfish');
 const additionalSlide = require('./v1/AdditionalSlide');
 const addPhotos = require('./v1/AddPhotos');
 const pdfUvfish = require('./v1/PdfUvfish');
-const pdfUv = require('./v1/pdfUv');
+const pdfUv = require('./v1/PdfUv');
 
 
 

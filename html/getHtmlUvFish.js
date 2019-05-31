@@ -243,7 +243,7 @@ module.exports = (data) => {
         <table class="main-table">
             <tr class="to-top">
                 <td>
-                    <img class="square" src="https://www.humancellatlas.org/files/GettyImages-460715491-3-1024x1024-blur.jpg" alt="">
+                    <img class="square" src="file:/home/ubuntu/cyt_photos/cyto_archive/${data.caseNumber}.jpg" alt="">
                 </td>
                 <td>
                     <p class="result">Total number of cells counted: ${data.totalCells}</p>

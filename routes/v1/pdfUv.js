@@ -3,7 +3,7 @@ const router = express.Router();
 const { UvfishPdf } = require('../../db');
 const fs = require('fs');
 const pdf = require('html-pdf');
-const getHtml = require('../../html/getHtmlUvFish')
+const getHtml = require('../../html/GetHtmlUvFish')
 
 
 const errorHandler = reqHandler => {
